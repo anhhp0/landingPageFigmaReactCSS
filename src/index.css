@@ -81,6 +81,10 @@ textarea::placeholder {
   opacity: 1; /* 1 */
   color: #9ca3af; /* 2 */
 }
+input, textarea{
+  font-family: "Poppins";
+}
+
 button,
 [role="button"] {
   cursor: pointer;

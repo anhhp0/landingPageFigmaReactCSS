@@ -16,13 +16,6 @@ const SiteFormContactUs: React.FC<siteFormContactUsProps> = ({
     yourInquiry: "",
   });
 
-//   const [errors, setErrors] = useState({
-//     firstName: "",
-//     lastName: "",
-//     emailAddress: "",
-//     subjectMessage: "",
-//     yourInquiry: "",
-//   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -35,35 +28,8 @@ const SiteFormContactUs: React.FC<siteFormContactUsProps> = ({
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Thực hiện xác thực tại đây
-    if (validateForm()) {
-      // Xử lý khi gửi form ở đây
-      console.log(formData);
-    }
   };
 
-  const validateForm = () => {
-    // Xác thực và cập nhật trạng thái lỗi
-    const newErrors = {
-      firstName: "",
-      lastName: "",
-      emailAddress: "",
-      subjectMessage: "",
-      yourInquiry: "",
-    };
-
-    // Thực hiện xác thực tùy thuộc vào yêu cầu của bạn
-    // Ở đây là ví dụ đơn giản chỉ kiểm tra trường trống
-    // if (formData.firstName.trim() === "") {
-    //   newErrors.firstName = "Trường này là bắt buộc";
-    // }
-
-    // Thêm các kiểm tra khác tương tự cho các trường khác
-
-    // setErrors(newErrors);
-
-    // Trả về true nếu không có lỗi, ngược lại trả về false
-    return Object.values(newErrors).every((error) => error === "");
-  };
 
   return (
     <form className={`contact-form ${className}`} onSubmit={handleSubmit}>
